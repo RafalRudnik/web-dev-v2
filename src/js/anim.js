@@ -54,14 +54,12 @@ gsap.fromTo(
 gsap.fromTo(
 	aboutLeft.children,
 	{
-		y: '+=200',
-		opacity: 0.5,
-		scale: 0.9,
+		y: '+=150',
+		opacity: 0,
 	},
 	{
 		y: 0,
 		opacity: 1,
-		scale: 1,
 		stagger: 0.2,
 		duration: 2,
 		ease: 'easeInOut',
@@ -70,26 +68,7 @@ gsap.fromTo(
 			start: 'top: 70%',
 			end: 'top: 0%',
 			scrub: true,
-		},
-	}
-);
-gsap.fromTo(
-	aboutLeft.children,
-	{
-		y: 0,
-		opacity: 1,
-	},
-	{
-		y: '-=200',
-		opacity: 0.5,
-		stagger: 0.2,
-		duration: 2,
-		ease: 'easeInOut',
-		scrollTrigger: {
-			trigger: aboutLeft,
-			start: 'top: -30%',
-			end: 'top: -50%',
-			scrub: true,
+			onLeave: () => ScrollTrigger.clearScrollMemory(),
 		},
 	}
 );
@@ -99,14 +78,12 @@ gsap.fromTo(
 gsap.fromTo(
 	aboutRight.children,
 	{
-		y: '+=300',
-		opacity: 0.5,
-		scale: 0.7,
+		y: '+=100',
+		opacity: 0,
 	},
 	{
 		y: 0,
 		opacity: 1,
-		scale: 1,
 		stagger: 0.4,
 		duration: 2.5,
 		ease: 'easeInOut',
@@ -115,26 +92,7 @@ gsap.fromTo(
 			start: 'top: 75%',
 			end: 'top: 0%',
 			scrub: true,
-		},
-	}
-);
-gsap.fromTo(
-	aboutRight.children,
-	{
-		y: 0,
-		opacity: 1,
-	},
-	{
-		y: '-=300',
-		opacity: 0.5,
-		stagger: 0.4,
-		duration: 2.5,
-		ease: 'easeInOut',
-		scrollTrigger: {
-			trigger: aboutRight,
-			start: 'top: -30%',
-			end: 'top: -50%',
-			scrub: true,
+			onLeave: () => ScrollTrigger.clearScrollMemory(),
 		},
 	}
 );
