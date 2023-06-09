@@ -7,6 +7,7 @@ const aboutRight = document.querySelector('.about__right');
 const techTxt = document.querySelectorAll('.technology__txt');
 const contactTxt = document.querySelector('.contact__card-left-txt');
 const contactImg = document.querySelectorAll('.contact-img');
+const allTimeLine = document.querySelectorAll('.flag-wrapper span');
 
 gsap.fromTo(
 	circle,
@@ -40,7 +41,7 @@ gsap.fromTo(
 		ease: 'easeInOut',
 		scrollTrigger: {
 			trigger: headerAnim,
-			start: 'top 40%',
+			start: 'top 30%',
 			// end: 'bottom', //gdzie ma sie skonczyc
 			scrub: true, //scroll dziala w obie strony
 			// markers: true,
@@ -111,7 +112,7 @@ gsap.fromTo(
 		ease: 'easeInOut',
 		scrollTrigger: {
 			trigger: aboutRight,
-			start: 'top: 60%',
+			start: 'top: 75%',
 			end: 'top: 0%',
 			scrub: true,
 		},
@@ -137,6 +138,27 @@ gsap.fromTo(
 		},
 	}
 );
+
+// ======================= ABOUT TIMELININE ================
+
+allTimeLine.forEach((line) => {
+	gsap.fromTo(
+		line,
+		{
+			opacity: 0,
+		},
+		{
+			opacity: 1,
+			stagger: 0.2,
+			duration: 2,
+			ease: 'easeInOut',
+			scrollTrigger: {
+				trigger: line,
+				start: 'top: 60%',
+			},
+		}
+	);
+});
 
 // ======================= TECH TXT =================
 

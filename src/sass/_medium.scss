@@ -100,37 +100,38 @@
 		}
 	}
 	.contact {
-		.contact {
-			&__card {
-				flex-direction: row;
-				width: 100%;
-			}
-			&__card-right {
-				justify-content: space-evenly;
-				width: 50%;
-			}
-			&__card-img-one,
-			&__card-img-two {
-				width: 189px;
-				height: 460px;
-			}
-			&__card-img-one {
-				align-self: center;
-			}
-
-			&__card-img-two {
-				align-self: flex-start;
-			}
-			&__card-left {
-				width: 50%;
-			}
-			&__map {
-				width: 100%;
+		&__card {
+			flex-direction: row;
+			width: 100%;
+			.background-txt {
+				left: -5%;
 			}
 		}
+		&__card-right {
+			justify-content: space-evenly;
+			width: 50%;
+		}
+		&__card-img-one,
+		&__card-img-two {
+			width: 189px;
+			height: 460px;
+		}
+		&__card-img-one {
+			align-self: center;
+		}
+
+		&__card-img-two {
+			align-self: flex-start;
+		}
+		&__card-left {
+			width: 50%;
+		}
+		&__map {
+			width: 100%;
+		}
+
 		.contact-form {
 			width: 50%;
-			border-radius: 1px solid red;
 		}
 	}
 	.technology {

@@ -25,14 +25,14 @@
 			margin: 0 auto;
 			margin-top: 20px;
 		}
-	
+
 		.direction-l {
 			position: relative;
 			width: 380px;
 			float: left;
 			text-align: right;
 		}
-	
+
 		.direction-r {
 			position: relative;
 			width: 380px;
@@ -43,6 +43,13 @@
 	.technology {
 		&__boxes-bottom {
 			padding-left: 10.5em;
+		}
+	}
+	.contact {
+		&__card {
+			.background-txt {
+				left: 3%;
+			}
 		}
 	}
 }
