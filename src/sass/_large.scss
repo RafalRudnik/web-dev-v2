@@ -1,0 +1,48 @@
+@media (min-width: 992px) {
+	.header {
+		&__img-color {
+			display: block;
+		}
+	}
+	.about {
+		&__card {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__right,
+		&__left {
+			width: 40%;
+		}
+		&__right-two {
+			display: block;
+		}
+		&__txt {
+			width: 100%;
+		}
+		.timeline {
+			width: 800px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+	
+		.direction-l {
+			position: relative;
+			width: 380px;
+			float: left;
+			text-align: right;
+		}
+	
+		.direction-r {
+			position: relative;
+			width: 380px;
+			float: right;
+			text-align: left;
+		}
+	}
+	.technology {
+		&__boxes-bottom {
+			padding-left: 10.5em;
+		}
+	}
+}
