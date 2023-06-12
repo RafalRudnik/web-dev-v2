@@ -15,6 +15,11 @@ const msgStatus = document.querySelector('.msg-status');
 const input = document.querySelector('#name');
 const mailInput = document.querySelector('#email');
 
+//================== COOKIE ====================
+
+const cookieBox = document.querySelector('.cookie-box');
+const cookieBtn = document.querySelector('.cookie-btn');
+
 const handleMainNav = () => {
 	menuBtnOne.classList.toggle('hide');
 	menuBtnTwo.classList.toggle('hide');
@@ -112,14 +117,29 @@ const handleMailSend = () => {
 	}
 };
 
+const showCookie = () => {
+	const cookieEaten = localStorage.getItem('cookie');
+	if (cookieEaten) {
+		cookieBox.classList.add('hideCookie');
+	}
+};
+
+const handleCookieBox = () => {
+	localStorage.setItem('cookie', 'true');
+	cookieBox.classList.add('hideCookie');
+};
+
 sendBtn.addEventListener('click', (e) => {
 	// e.preventDefault();
 	checkName(e);
 	checkMail(mailInput, e);
 	checkErrors(e);
 });
+
+showCookie();
 handleCurrentYear();
 allLinks.forEach((link) => link.addEventListener('click', handleMainNav));
 menuBtnOne.addEventListener('click', handleMainNav);
 menuBtnTwo.addEventListener('click', handleMainNav);
 window.addEventListener('scroll', handleBurger);
+cookieBtn.addEventListener('click', handleCookieBox);

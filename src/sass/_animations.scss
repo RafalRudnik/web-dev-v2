@@ -63,17 +63,16 @@
 
 @keyframes rotate-in-hor {
 	0% {
-	  -webkit-transform: rotateX(360deg);
-			  transform: rotateX(360deg);
-	  opacity: 0;
+		-webkit-transform: rotateX(360deg);
+		transform: rotateX(360deg);
+		opacity: 0;
 	}
 	100% {
-	  -webkit-transform: rotateX(0deg);
-			  transform: rotateX(0deg);
-	  opacity: 1;
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		opacity: 1;
 	}
-  }
-  
+}
 
 @keyframes arrowAnim {
 	0% {
@@ -112,5 +111,12 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
