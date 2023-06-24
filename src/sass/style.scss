@@ -88,6 +88,10 @@ nav {
 		&-txt {
 			font-size: 1.6rem;
 			font-weight: bold;
+			a {
+				font-size: 1.2rem;
+				color: $mediumTxt;
+			}
 		}
 		&-btn {
 			padding: 0.5em;
@@ -253,7 +257,9 @@ nav {
 
 .about {
 	width: 100%;
-	margin-bottom: 5em;
+	// margin-bottom: 5em;
+	padding-bottom: 5em;
+	overflow: hidden;
 	&__card {
 		display: flex;
 		flex-direction: column;

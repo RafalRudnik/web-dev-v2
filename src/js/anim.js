@@ -9,6 +9,7 @@ const contactTxt = document.querySelector('.contact__card-left-txt');
 const contactImg = document.querySelectorAll('.contact-img');
 const allTimeLine = document.querySelectorAll('.flag-wrapper span');
 
+
 gsap.fromTo(
 	circle,
 	{
@@ -89,6 +90,7 @@ gsap.fromTo(
 		ease: 'easeInOut',
 		scrollTrigger: {
 			trigger: aboutRight,
+			scroller: '.main_container',
 			start: 'top: 75%',
 			end: 'top: 0%',
 			scrub: true,
