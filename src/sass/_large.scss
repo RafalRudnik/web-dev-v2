@@ -39,6 +39,13 @@
 			float: right;
 			text-align: left;
 		}
+		&__work {
+			&-txt {
+				span {
+					font-size: 6rem;
+				}
+			}
+		}
 	}
 	.technology {
 		&__boxes-bottom {

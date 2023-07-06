@@ -8,7 +8,9 @@ const techTxt = document.querySelectorAll('.technology__txt');
 const contactTxt = document.querySelector('.contact__card-left-txt');
 const contactImg = document.querySelectorAll('.contact-img');
 const allTimeLine = document.querySelectorAll('.flag-wrapper span');
+const workLink = document.querySelector('.about__work-txt');
 
+let resolution = gsap.matchMedia();
 
 gsap.fromTo(
 	circle,
@@ -115,6 +117,32 @@ allTimeLine.forEach((line) => {
 			scrollTrigger: {
 				trigger: line,
 				start: 'top: 60%',
+			},
+		}
+	);
+});
+
+// ======================= ABOUT LINK ================
+
+resolution.add('(min-width: 768px)', () => {
+	gsap.fromTo(
+		workLink,
+		{
+			y: 0,
+			x: 0,
+		},
+		{
+			y: '+=100',
+			x: '+=70%',
+			stagger: 0.4,
+			duration: 2.5,
+			ease: 'easeInOut',
+			scrollTrigger: {
+				trigger: workLink,
+				start: 'top: 50%',
+				end: 'top: 20%',
+				scrub: true,
+				pin: true,
 			},
 		}
 	);
