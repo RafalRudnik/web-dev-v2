@@ -143,7 +143,6 @@ resolution.add('(min-width: 768px)', () => {
 				end: 'top: 25%',
 				scrub: true,
 				pin: true,
-				markers: true,
 			},
 		}
 	);
