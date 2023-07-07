@@ -140,9 +140,10 @@ resolution.add('(min-width: 768px)', () => {
 			scrollTrigger: {
 				trigger: workLink,
 				start: 'top: 50%',
-				end: 'top: 20%',
+				end: 'top: 25%',
 				scrub: true,
 				pin: true,
+				markers: true,
 			},
 		}
 	);
