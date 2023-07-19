@@ -12,6 +12,19 @@ const workLink = document.querySelector('.about__work-txt');
 
 let resolution = gsap.matchMedia();
 
+const lenis = new Lenis();
+
+lenis.on('scroll', (e) => {
+	console.log(e);
+});
+
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 gsap.fromTo(
 	circle,
 	{
